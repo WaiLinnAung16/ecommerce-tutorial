@@ -581,10 +581,29 @@ const Products = () => {
   ];
 
   return (
-    <div className=" grid grid-cols-4 gap-5 container mx-auto my-5">
-      {products.map((product) => (
-        <Card key={product.id} product={product} />
-      ))}
+    <div className="  container mx-auto my-5">
+      <div className=" flex items-center gap-4">
+        <h1 className=" font-semibold">Categories</h1>
+
+        <label htmlFor="underline_select" className="sr-only">
+          Underline select
+        </label>
+        <select
+          id="underline_select"
+          className=" w-52 border-b shadow px-2 py-1 outline-none rounded focus:ring-2 focus:ring-sky-500"
+        >
+          <option selected>All</option>
+          <option value={0}>Smartphone</option>
+          <option value={1}>Laptops</option>
+          <option value={2}>Groceries</option>
+          <option value={3}>Home-decorations</option>
+        </select>
+      </div>
+      <div className=" grid grid-cols-4 gap-5">
+        {products.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };
