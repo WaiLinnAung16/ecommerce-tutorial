@@ -582,9 +582,8 @@ const Products = () => {
 
   return (
     <div className="  container mx-auto my-5">
-      <div className=" flex items-center gap-4">
+      <div className=" flex items-center gap-4 mb-5">
         <h1 className=" font-semibold">Categories</h1>
-
         <label htmlFor="underline_select" className="sr-only">
           Underline select
         </label>
@@ -596,7 +595,8 @@ const Products = () => {
           <option value={0}>Smartphone</option>
           <option value={1}>Laptops</option>
           <option value={2}>Groceries</option>
-          <option value={3}>Home-decorations</option>
+          <option value={3}>Skin Care</option>
+          <option value={4}>Home-decorations</option>
         </select>
       </div>
       <div className=" grid grid-cols-4 gap-5">
